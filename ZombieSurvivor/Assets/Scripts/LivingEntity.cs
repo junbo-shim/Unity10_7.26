@@ -20,6 +20,8 @@ public class LivingEntity : MonoBehaviour, IDamageable {
     // 데미지를 입는 기능
     public virtual void OnDamage(float damage, Vector3 hitPoint, Vector3 hitNormal) {
         // 데미지만큼 체력 감소
+
+        Debug.LogFormat("{0}, {1}", health, damage);
         health -= damage;
 
         // 체력이 0 이하 && 아직 죽지 않았다면 사망 처리 실행
